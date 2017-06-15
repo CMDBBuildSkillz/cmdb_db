@@ -677,39 +677,6 @@ INSERT INTO `cm_subenvironmenttype` VALUES (1,'MAIN',0),(2,'XLeg',0),(3,'YLeg',0
 UNLOCK TABLES;
 
 --
--- Table structure for table `cm_temp_globalconfig`
---
-
-DROP TABLE IF EXISTS `cm_temp_globalconfig`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cm_temp_globalconfig` (
-  `GlobalConfigID` bigint(20) NOT NULL AUTO_INCREMENT,
-  `GlobalConfigParameter` varchar(4096) NOT NULL,
-  `GlobalConfigValue` varchar(4096) DEFAULT NULL,
-  `GlobalConfigHieraAddress` varchar(4096) DEFAULT NULL,
-  `RecursiveByEnv` bit(1) NOT NULL DEFAULT b'0',
-  `RecursiveByRel` bit(1) NOT NULL DEFAULT b'0',
-  `RecursiveBySubEnv` bit(1) NOT NULL DEFAULT b'0',
-  `GlobalConfigNotes` varchar(4096) DEFAULT NULL,
-  `GlobalConfigIsSensitive` bit(1) DEFAULT b'0',
-  `Version` bigint(20) NOT NULL DEFAULT '0',
-  `isArrayItem` bit(1) NOT NULL DEFAULT b'0',
-  PRIMARY KEY (`GlobalConfigID`)
-) ENGINE=InnoDB AUTO_INCREMENT=1187 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cm_temp_globalconfig`
---
-
-LOCK TABLES `cm_temp_globalconfig` WRITE;
-/*!40000 ALTER TABLE `cm_temp_globalconfig` DISABLE KEYS */;
-INSERT INTO `cm_temp_globalconfig` VALUES (73,'root_pass','{SENSITIVE}','ROOT:{ParamName}','\0','\0','\0','','',0,'\0'),(81,'httppass','{SENSITIVE}','ROOT:columbus_delivery:{ParamName}','\0','\0','\0','','',0,'\0'),(100,'password','{SENSITIVE}','ROOT:user_pmsukmsup:{ParamName}','\0','\0','\0','','',0,'\0'),(106,'password','{SENSITIVE}','ROOT:user_pmsukmjbo:{ParamName}','\0','\0','\0','','',0,'\0'),(111,'password','{SENSITIVE}','ROOT:user_pmsukpdsup:{ParamName}','\0','\0','\0','','',0,'\0'),(117,'password','{SENSITIVE}','ROOT:user_pmsukpdjbo:{ParamName}','\0','\0','\0','','',0,'\0'),(122,'password','{SENSITIVE}','ROOT:user_pmsukpd:{ParamName}','\0','\0','\0','','',0,'\0'),(127,'password','{SENSITIVE}','ROOT:user_pmsukesup:{ParamName}','\0','\0','\0','','',0,'\0'),(134,'password','{SENSITIVE}','ROOT:user_pmsukejbo:{ParamName}','\0','\0','\0','','',0,'\0'),(144,'password','{SENSITIVE}','ROOT:user_pmsukssup:{ParamName}','\0','\0','\0','','',0,'\0'),(150,'password','{SENSITIVE}','ROOT:user_pmsukrjbo:{ParamName}','\0','\0','\0','','',0,'\0'),(158,'password','{SENSITIVE}','ROOT:user_pmsukst:{ParamName}','\0','\0','\0','','',0,'\0'),(164,'password','{SENSITIVE}','ROOT:user_pmsuktsup:{ParamName}','\0','\0','\0','','',0,'\0'),(169,'password','{SENSITIVE}','ROOT:user_pmsgbrtt:{ParamName}','\0','\0','\0','','',0,'\0'),(180,'password','{SENSITIVE}','ROOT:user_pmsgbmtt:{ParamName}','\0','\0','\0','','',0,'\0'),(188,'password','{SENSITIVE}','ROOT:user_pmsgbrpm:{ParamName}','\0','\0','\0','','',0,'\0'),(194,'password','{SENSITIVE}','ROOT:user_pmsgbmpm:{ParamName}','\0','\0','\0','','',0,'\0'),(202,'password','{SENSITIVE}','ROOT:user_pmsgbrpd:{ParamName}','\0','\0','\0','','',0,'\0'),(208,'password','{SENSITIVE}','ROOT:user_pmsgbmpd:{ParamName}','\0','\0','\0','','',0,'\0'),(215,'password','{SENSITIVE}','ROOT:user_pmsgbrst:{ParamName}','\0','\0','\0','','',0,'\0'),(224,'password','{SENSITIVE}','ROOT:user_pmsgbmst:{ParamName}','\0','\0','\0','','',0,'\0'),(233,'password','{SENSITIVE}','ROOT:user_pmsgbrit:{ParamName}','\0','\0','\0','','',0,'\0'),(240,'password','{SENSITIVE}','ROOT:user_pmsgbmit:{ParamName}','\0','\0','\0','','',0,'\0'),(275,'auth_pass','{SENSITIVE}','ROOT:keepalived_conf:\'gbrpmseast00\':{ParamName}','\0','\0','\0','','',0,'\0'),(281,'auth_pass','{SENSITIVE}','ROOT:keepalived_conf:\'gbrpmsbrgt00\':{ParamName}','\0','\0','\0','','',0,'\0'),(287,'auth_pass','{SENSITIVE}','ROOT:keepalived_conf:\'gbrpmsuist00\':{ParamName}','\0','\0','\0','','',0,'\0'),(626,'root_pass','{SENSITIVE}','ROOT:mysql_conf:talend_supp:{ParamName}','\0','\0','\0','','',0,'\0'),(631,'password','{SENSITIVE}','ROOT:mysql_conf:talend_prod:{ParamName}','\0','\0','\0','','',0,'\0'),(648,'root_pass','{SENSITIVE}','ROOT:mysql_conf:talend_prod:{ParamName}','\0','\0','\0','','',0,'\0'),(652,'password','{SENSITIVE}','ROOT:mysql_conf:talend_supp:{ParamName}','\0','\0','\0','','',0,'\0'),(668,'root_pass','{SENSITIVE}','ROOT:mysql_conf:talend_supp:{ParamName}','\0','\0','\0','','',0,'\0'),(672,'password','{SENSITIVE}','ROOT:mysql_conf:talend_stag:{ParamName}','\0','\0','\0','','',0,'\0'),(689,'root_pass','{SENSITIVE}','ROOT:mysql_conf:talend_stag:{ParamName}','\0','\0','\0','','',0,'\0'),(695,'password','{SENSITIVE}','ROOT:mysql_conf:talend_test:{ParamName}','\0','\0','\0','','',0,'\0'),(710,'root_pass','{SENSITIVE}','ROOT:mysql_conf:talend_test:{ParamName}','\0','\0','\0','','',0,'\0'),(715,'password','{SENSITIVE}','ROOT:mysql_conf:talend_educ:{ParamName}','\0','\0','\0','','',0,'\0'),(731,'root_pass','{SENSITIVE}','ROOT:mysql_conf:talend_educ:{ParamName}','\0','\0','\0','','',0,'\0'),(751,'root_pass','{SENSITIVE}','ROOT:mysql_conf:talend_sdbx:{ParamName}','\0','\0','\0','','',0,'\0'),(999,'password','{SENSITIVE}','ROOT:user_tagbmdb:{ParamName}','\0','\0','\0','','',0,'\0'),(1004,'password','{SENSITIVE}','ROOT:user_tagbmadm:{ParamName}','\0','\0','\0','','',0,'\0'),(1016,'password','{SENSITIVE}','ROOT:user_tagbpdb:{ParamName}','\0','\0','\0','','',0,'\0'),(1021,'password','{SENSITIVE}','ROOT:user_tagbpadm:{ParamName}','\0','\0','\0','','',0,'\0'),(1031,'password','{SENSITIVE}','ROOT:user_tagbsdb:{ParamName}','\0','\0','\0','','',0,'\0'),(1036,'password','{SENSITIVE}','ROOT:user_tagbsadm:{ParamName}','\0','\0','\0','','',0,'\0'),(1047,'password','{SENSITIVE}','ROOT:user_tagbtdb:{ParamName}','\0','\0','\0','','',0,'\0'),(1052,'password','{SENSITIVE}','ROOT:user_tagbtadm:{ParamName}','\0','\0','\0','','',0,'\0'),(1063,'password','{SENSITIVE}','ROOT:user_tagbedb:{ParamName}','\0','\0','\0','','',0,'\0'),(1068,'password','{SENSITIVE}','ROOT:user_tagbeadm:{ParamName}','\0','\0','\0','','',0,'\0');
-/*!40000 ALTER TABLE `cm_temp_globalconfig` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `cm_vip`
 --
 
@@ -2391,7 +2358,7 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-15 10:27:04
+-- Dump completed on 2017-06-15 10:32:58
 
 CREATE USER 'cmdb_app_user'@'localhost' IDENTIFIED BY 'auto_crud_user';
 GRANT ALL PRIVILEGES ON *.* TO 'cmdb_app_user'@'localhost' WITH GRANT OPTION;
